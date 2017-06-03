@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.contrib.auth import views as auth_views # let django handle login and authentication
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+	url(r'^login/$', auth_views.login, {'template_name': 'login.html', 'redirect_authenticated_user': True, }, name='login'),
 ]
