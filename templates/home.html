@@ -14,13 +14,61 @@
 <div class="landing">
     <div class="map">
         <img src="{% static 'img/map.svg' %}"/>
+        <div class="pin china">
+            <div class="dialog">
+                <div class="country">
+                    China
+                </div>
+                <a class="count">
+                    18 factories
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
+        <div class="pin france">
+            <div class="dialog">
+                <div class="country">
+                    France
+                </div>
+                <a class="count">
+                    5 factories
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
+        <div class="pin bangladesh">
+            <div class="dialog">
+                <div class="country">
+                    Bangladesh
+                </div>
+                <a class="count">
+                    20 factories
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
+        <div class="pin ireland">
+            <div class="dialog">
+                <div class="country">
+                    Ireland
+                </div>
+                <a class="count">
+                    3 factories
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
     </div>
     <div class="desc">
             <span class="title">
 
                 I’m looking for sustainable factories for
             </span>
-        <select class="ui search dropdown">
+        <select class="ui search dropdown fabric-ddl">
             <option value="">type of fabric</option>
             <option value=Cotton>Cotton</option>
             <option value=Denim>Denim</option>
@@ -31,7 +79,7 @@
             <option value=Silk>Silk</option>
             <option value=Wool>Wool</option>
         </select>
-        <select class="ui search dropdown">
+        <select class="ui search dropdown clothing-ddl">
             <option value="">type of clothing</option>
             <option value=Blouse>Blouse</option>
             <option value=Coats>Coats</option>
