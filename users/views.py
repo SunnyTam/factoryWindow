@@ -12,6 +12,22 @@ from django.contrib.auth.views import login
 
 # Create your views here.
 
+def check_user(request):
+	
+	iusername = request.POST.get("email")
+	ipassword = request.POST.get("password")
+	
+	try:
+		user = User.objects.get(username=iusername)
+		
+		if user.check_password(ipassword):
+			return HttpResponse("success")	
+		else:
+			return HttpResponse("failure_incorrect")
+		
+	except User.DoesNotExist:
+		return HttpResponse("failure_does_not_exist")
+
 def registration(request):
 	
 	if request.user.is_authenticated():

@@ -52,7 +52,7 @@
 						<div class="col-lg-12">
 							
 							<!-- Login form ========================================================================-->
-							<form id="login-form" action="http://phpoll.com/login/process" method="post" role="form" style="display: block;">
+							<form id="login-form" method="post" role="form" style="display: block;" onsubmit="return validateLogin()">{% csrf_token %} 
 								<div class="form-group">
 									<input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="">
 								</div>
@@ -196,11 +196,13 @@ function validateForm() {
 				$("#register-form").fadeOut(100);
 				$('#register-form-link').removeClass('active');
 				$('#login-form-link').addClass('active');
-				
+				return true;
 			} else {
 				
 				console.log("ERROR registration");
 				console.log(data);
+				
+				
 				
 //				if (data.indexOf("duplicate key value violates unique constraint") >= 0) {
 //					$("#modalErrorMessage").text("Username already exists.");
@@ -214,6 +216,58 @@ function validateForm() {
 		}
 	});		
 	return false;
+}
+	
+function validateLogin() {
+	var email = $("#login-form input[name=email]").val();
+	var password = $("#login-form input[name=password]").val();
+	
+	if (email == "" || password == "") {
+		console.log("Empty login fields");
+		return false;
+	}
+	
+	$.ajax({
+		beforeSend: function(xhr, settings) {
+
+			if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+				xhr.setRequestHeader("X-CSRFToken", csrftoken);
+			}
+		},
+		type:"POST",
+		url:"{% url 'url_validate_user' %}",
+		data: {
+			'email': email,
+			'password': password,
+		},
+		success:function(data) {
+
+			if (data == "success") {
+				
+				console.log("Login success");
+				
+				// TODO redirect to homepage 
+				return true;
+			} else {
+				
+				console.log("ERROR login");
+				console.log(data);
+				
+				$("#modalHeader").text("Error");
+				
+				if (data.indexOf('incorrect') >= 0) { // user exists but information is not correct 
+					$("#modalBody").text("Please make sure username and password are correct.");
+				} else { // user does not exist 
+					$("#modalBody").text("User does not exist. Please register first.");
+				}
+				
+				$('#myModal').modal('show');	
+				return false;
+			}
+		}
+	});		
+	return false;
+	
 }
 	
 </script>
