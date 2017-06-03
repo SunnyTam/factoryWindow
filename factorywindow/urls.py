@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views # let django handle login and authentication
+from home import views as home_views
 from django.conf.urls import url, include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 	url(r'^login/$', auth_views.login, {'template_name': 'login.html', 'redirect_authenticated_user': True, }, name='login'),
 	url(r'^register/', include("users.urls")),
+	url(r'^home/', home_views.index),
 ]
