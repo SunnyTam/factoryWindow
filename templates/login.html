@@ -1,8 +1,12 @@
+{% load static %}
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
-  {% include "bootstrap.html" %}
+	<title>Bootstrap Example</title>
+	{% include "bootstrap.html" %}
+	<link rel="stylesheet" href="{% static 'css/login.css' %}"/>
 </head>
 <body>
 
