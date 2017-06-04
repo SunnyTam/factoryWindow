@@ -5,17 +5,15 @@ from django.shortcuts import render
 
 # Create your views here.
 
+def story(request):
+    return render(request, "factory-story.html")
 #@login_required(login_url="/login/")
 def request_form(request):
-	
+
 	context = {}
 	return render(request, "contact.html", context)
 
 def results(request):
 	return render(request, "results.html")
 
-def contact(request):
-	return render(request, "contact.html")
 
-	
-	

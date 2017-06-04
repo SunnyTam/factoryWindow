@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/factory-story.css' %}"/>
+    <script src="{% static 'js/factory-story.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="menubar-hidden-padding"></div>
+    <div class="cover">
+        <img src="{% static 'img/factory-cover.jpg' %}" alt="cover">
+    </div>
+    <div class="story">
+        <div class="topic">
+            <div class="title item">
+                BEHIND THE FACTORY
+            </div>
+            <div class="main-title item">
+                The Wool Factory
+            </div>
+            <div class="desc item">
+                This factory is particularly unique as they raise their own sheep to produce the wool used in their
+                factory. They are experts in wool and produce everything from woollen coats to dresses to scarves.
+            </div>
+            <div class="eco">
+                <img src="{% static 'img/eco/GOTS_logo1_grey.png' %}" alt="">
+                <img src="{% static 'img/eco/OE_100_logo1_grey.png' %}" alt="">
+                <img src="{% static 'img/eco/OE_blended_logo1_grey.png' %}" alt="">
+                <img class="sus" src="{% static 'img/eco/Sustinable_grey.png' %}" alt="">
+                <img src="{% static 'img/eco/Okeo_tex_100_logo2_grey.png' %}" alt="">
+            </div>
+        </div>
+        <hr class="hr">
+        <div class="content">
+            <div class="contact">
+                <div class="dialog">
+                    <div class="circle">
+                        WF
+                    </div>
+                    <div class="title center">
+                        WE SERVICE
+                    </div>
+                    <div class="content center">
+                        <div>Students</div>
+                        <div>Small businesses</div>
+                        <div>Indepedent designers</div>
+                    </div>
+                    <div class="title">MAX ORDER QUANTITY (pcs)</div>
+{#                    <div class="center-content center">10000</div>#}
+                    <div class="title">MIN ORDER QUANTITY (pcs)</div>
+                    <div class="content">
+                        <div>Knitted fabrics: 50</div>
+                        <div>Workwear / Uniforms: 50</div>
+                        <div>Childrenswear / Babywear: 50</div>
+                        <div>Coats / Jackets: 50</div>
+                        <div>Menswear: 50</div>
+                        <div>Shorts / Skirts: 50</div>
+                        <div>T-shirts / Shirts / Tops: 300</div>
+                        <div>Womenswear: 50</div>
+                    </div>
+                    <button class="dialog-submit">Contact</button>
+                </div>
+            </div>
+            <div class="main">
+                <div class="title item">How We Found It</div>
+                <div class="content item">
+                    We make it a priority to find the most sustainable and environmentally friendly factories for our
+                    platform, they’re not always easy to find. In the case of our wool factory, a chance encounter in
+                    Hong Kong set us on a hunt for this factory in mainland China.
+                    Wool is a premium product and we knew Factory Window has to offer the same factories used by top
+                    brands. Luckily, we met the lead designer of this factory at an exhibition, who took the time to
+                    learn more about us and loved the concept!
+
+                </div>
+                <div class="title item">
+                    Capabilities
+                </div>
+                <div class="content item">
+                    They are capable of producing 80,000 units per month and currently employ over 500 employees in a
+                    beautiful factory. Minimum quantity orders are as low as 50 pieces giving a wide range of designers
+                    and brands an opportunity to work with such an established market player.
+                </div>
+                <div class="title item">The Materials</div>
+                <div class="content item">
+                    This factory shepherds their own flock of sheep, which they raise, shear, and clean before spinning
+                    the wool themselves. The vertical integration allows the factory to control costs and maximize
+                    returns—ensuring the best, most efficient manufacturing process possible, which is of course
+                    sustainable.
+                </div>
+                <div class="slick">
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/3.jpg' %}" alt="">
+                    </div>
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/4.jpg' %}" alt="">
+                    </div>
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/5.jpg' %}" alt="">
+                    </div>
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/6.jpg' %}" alt="">
+                    </div>
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/7.jpg' %}" alt="">
+                    </div>
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/8.jpg' %}" alt="">
+                    </div>
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/9.jpg' %}" alt="">
+                    </div>
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/10.jpg' %}"
+                                                 alt=""></div>
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/11.jpg' %}"
+                                                 alt=""></div>
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/12.jpg' %}"
+                                                 alt=""></div>
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/13.jpg' %}"
+                                                 alt=""></div>
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/14.jpg' %}"
+                                                 alt=""></div>
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/15.jpg' %}"
+                                                 alt=""></div>
+                    <div class="slick-item"><img class="slick-item" src="{% static 'img/factory-slide/16.jpg' %}"
+                                                 alt=""></div>
+                </div>
+                <div class="title item">About the Factory</div>
+                <div class="content item">
+                    In its 50 year history, this factory has been owned by two families. It was started by a local
+                    weaver, who opened a mill and sold it to a family friend, who has continued to operate the business.
+                    The family is dedicated to maintaining their quality and craftsmanship and treating employees well.
+                    Established in 1967, this factory employs 800 people in the city of Dongguan. The grounds of the
+                    factory are simple, yet elegant. On our last visit we toured the local cafeteria and discussed what
+                    many workers do for fun. On the weekends, they often run into town for movies or play Mahjong in the
+                    courtyard.
+                </div>
+                <div class="contact">
+                    <div class="icon">
+                        <img src="{% static 'img/owner-icon.jpg' %}" alt="icon">
+                    </div>
+                    <div class="content">
+                        <div class="name">Mr. Chu</div>
+                        <div class="title">OWNER</div>
+                        <div class="desc">He is friendly and highly communicative. Being an owner of a sustainable
+                            factory, he sees his staff as families. He is looking to expand his variety of fashion
+                            designs to Lorum Ipsum.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="map">
+{#        <img src="" alt="">#}
+{#        <i class="fa fa-map-marker pin" aria-hidden="true"></i>#}
+        <div class="content">
+            <div class="title">ADDRESS</div>
+            <div class="data">Lorum Ipsum, Lorum Road, Lorum City, Lorum Province, China</div>
+            <div class="title">PHONE</div>
+            <div class="data">12345678</div>
+            <div class="title">LOCAL TIME</div>
+            <div class="data">14:00</div>
+        </div>
+    </div>
+{% endblock %}

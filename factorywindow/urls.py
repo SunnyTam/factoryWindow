@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views # let django handle login and authentication
 from home import views as home_views
-from factory import views as factory_views
+from factory import views as factory
 from django.conf.urls import url, include
 
 urlpatterns = [
@@ -28,6 +28,6 @@ urlpatterns = [
 #	url( r'^', include("factory.urls")),
 
 	url(r'^home/', home_views.index),
+	url(r'^factory/story/', factory.story),
 	url(r'^results/', include("factory.urls")),
-	url(r'^contact/', factory_views.contact),
 ]
