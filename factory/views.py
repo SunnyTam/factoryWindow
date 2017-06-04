@@ -14,5 +14,8 @@ def request_form(request):
 def results(request):
 	return render(request, "results.html")
 
+def contact(request):
+	return render(request, "contact.html")
+
 	
 	
