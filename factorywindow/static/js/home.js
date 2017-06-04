@@ -3,10 +3,14 @@
  */
 
 function onDdlSelected(selectedFabric, selectedClothing) {
-    if(selectedFabric !== '' || selectedClothing !== '') {
-        $('.pin').hide();
-    } else {
+    $(".overlay").fadeOut("slow");
+    // console.log(selectedFabric);
+    // console.log(selectedClothing);
+    // console.log(selectedFabric != '' && selectedClothing != '');
+    if(selectedFabric !== '' && selectedClothing !== '') {
         $('.pin').show();
+    } else {
+        $('.pin').hide();
     }
 }
 
@@ -16,13 +20,13 @@ $(function () {
     var selectedFabric = '';
     var selectedClothing = '';
 
-   $('.fabric-ddl').change(function(){
-       selectedFabric = $(this).val();
+   $('.fabric-ddl select').change(function(){
+       selectedFabric = $('.fabric-ddl select').val();
        onDdlSelected(selectedFabric, selectedClothing);
    });
 
-    $('.clothing-ddl').change(function(){
-        selectedClothing = $(this).val();
+    $('.clothing-ddl select').change(function(){
+        selectedClothing = $('.clothing-ddl select').val();
         onDdlSelected(selectedFabric, selectedClothing);
    });
 });
