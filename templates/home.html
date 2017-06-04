@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+    <script src="{% static 'js/home.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+{% endblock %}
+
+{% block body %}
+<div class="menubar-hidden-padding"></div>
+<div class="landing">
+    <div class="map">
+        <img src="{% static 'img/map.svg' %}"/>
+        <div class="pin china">
+            <div class="dialog">
+                <div class="country">
+                    China
+                </div>
+                <a class="count">
+                    18 factories
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
+        <div class="pin france">
+            <div class="dialog">
+                <div class="country">
+                    France
+                </div>
+                <a class="count">
+                    5 factories
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
+        <div class="pin bangladesh">
+            <div class="dialog">
+                <div class="country">
+                    Bangladesh
+                </div>
+                <a class="count">
+                    20 factories
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
+        <div class="pin ireland">
+            <div class="dialog">
+                <div class="country">
+                    Ireland
+                </div>
+                <a class="count">
+                    3 factories
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="desc">
+            <span class="title">
+
+                I’m looking for sustainable factories for
+            </span>
+        <select class="ui search dropdown fabric-ddl">
+            <option value="">type of fabric</option>
+            <option value=Cotton>Cotton</option>
+            <option value=Denim>Denim</option>
+            <option value=Leather>Leather</option>
+            <option value=Linen>Linen</option>
+            <option value=Nylon>Nylon</option>
+            <option value=Polyester>Polyester</option>
+            <option value=Silk>Silk</option>
+            <option value=Wool>Wool</option>
+        </select>
+        <select class="ui search dropdown clothing-ddl">
+            <option value="">type of clothing</option>
+            <option value=Blouse>Blouse</option>
+            <option value=Coats>Coats</option>
+            <option value=Dresses>Dresses</option>
+            <option value=Jackets>Jackets</option>
+            <option value=Jeans>Jeans</option>
+            <option value=Shirts>Shirts</option>
+            <option value=Skirts>Skirts</option>
+            <option value=Shoes>Shoes</option>
+            <option value=Shorts>Shorts</option>
+            <option value=Tops>Tops</option>
+            <option value=Trousers>Trousers</option>
+            <option value=T-shirts>T-shirts</option>
+        </select>
+    </div>
+</div>
+<div class="can-do">
+    <div class="title">What you can do</div>
+    <div class="item">
+        <div class="img"></div>
+        <div class="text">
+            <div class="title">Access sustainable factories</div>
+            <div class="desc">
+                We do the sustainable manufacturing research for you.  Get access to good-quality, reliable factories,
+                worldwide.
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="img"></div>
+        <div class="text">
+            <div class="title">Manage your project</div>
+            <div class="desc">
+                Compare factory specifications, ask questions, communicate directly with manufacturers. All in one
+                platform.
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="img"></div>
+        <div class="text">
+            <div class="title">Start making</div>
+            <div class="desc">
+                Once you find your ideal manufacturer, the making process can begin.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about-me">
+
+</div>
+{% endblock %}

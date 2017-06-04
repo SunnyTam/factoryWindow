@@ -1,0 +1,181 @@
+.landing {
+    background-color: #ededed;
+    min-height: 580px;
+}
+
+.landing > .map {
+    position: relative;
+    padding: 7px;
+    text-align: center;
+}
+
+.landing select {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.landing {
+
+}
+
+.landing > .map > img {
+    padding: 7px;
+    text-align: center;
+    min-width: 60%;
+    max-width: 90%;
+}
+
+.landing > .map > .pin {
+    display: none;
+    text-align: left;
+    position: absolute;
+    font-size: 20px;
+}
+
+.landing > .map > .pin > i {
+    animation-name: pin;
+    animation-duration: 1s;
+}
+
+@keyframes pin {
+    0%   {
+        -ms-transform: translate(0px, -100px); /* IE 9 */
+        -webkit-transform: translate(0px, -100px); /* Safari */
+        transform: translate(0px, -100px);
+    }
+    100% {
+        -ms-transform: translate(0px, 0px); /* IE 9 */
+        -webkit-transform: translate(0px, 0px); /* Safari */
+        transform: translate(0px, 0px);
+    }
+}
+
+.landing > .map > .pin > .dialog {
+    text-align: left;
+    padding: 8px;
+    height: 52px;
+    width: 95px;
+    background: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    margin: 7px 0;
+    color: #4a494a;
+    animation-name: pin-dialog;
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.landing > .map > .pin > .dialog > a {
+    color: #4a494a;
+}
+
+.landing > .map > .pin > .dialog:hover > a {
+    color: white !important;
+}
+
+.landing > .map > .pin > .dialog:hover{
+    background-color: #f37a88;
+    color: white !important;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.25);
+}
+
+.landing > .map > .pin > .dialog > .country {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.landing > .map > .pin > .dialog > .count {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 12px;
+}
+
+.landing > .map > .pin > .dialog > .count > i {
+    margin-left: 5px;
+}
+
+.france {
+    bottom: 370px;
+    right: 750px;
+}
+
+.china {
+    bottom: 300px;
+    right: 450px;
+}
+.bangladesh.pin {
+    bottom: 280px;
+    right: 615px;
+    text-align: right !important;
+}
+
+.ireland.pin {
+    text-align: right!important;
+    bottom: 388px;
+    right: 879px;
+}
+
+.landing .desc {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.landing .desc .title {
+    margin: 0 21px;
+}
+
+.landing .desc .select {
+    margin: 0 21px;
+}
+
+.menubar-hidden-padding {
+    height: 80px;
+    width: 100%;
+    background-color: #ededed;
+}
+
+.can-do >.title {
+    font-size: 20px;
+    margin: 60px 0 69px;
+    color: #4a494a;
+    text-align: center;
+}
+
+.can-do {
+    margin: 0 auto 0 auto;
+    width: 750px;
+}
+
+.can-do .item {
+    margin: 44px 0 44px 0;
+}
+
+.can-do .item .img {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    background-color: #d7d7d7;
+    display: inline-block;
+    margin: 0 43px;
+}
+
+.can-do .item .text {
+    max-width: 412px;
+    display: inline-block;
+}
+
+.can-do .item .text .title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.can-do .item .text .desc {
+}
