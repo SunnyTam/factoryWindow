@@ -10,9 +10,85 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static 'css/reset.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/bootstrap-tagsinput.css' %}"/>
+
+<style>
+		
+		.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+	
+		/* layout.css Style */
+.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+}
+		
+		.mini-text{
+			font-size: 0.2em;
+		}
+		
+		.bootstrap-tagsinput {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    display: block;
+    padding: 4px 6px;
+    color: #555;
+    vertical-align: middle;
+    border-radius: 4px;
+    max-width: 100%;
+    line-height: 22px;
+    cursor: text;
+}
+.bootstrap-tagsinput input {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0 6px;
+    margin: 0;
+    width: auto;
+    max-width: inherit;
+}
+	</style>
+
 {% endblock %}
 
 {% block body %}
+
     <div class="menubar-hidden-padding"></div>
     <div class="cover">
         <img src="{% static 'img/factory-cover.jpg' %}" alt="cover">
@@ -33,7 +109,14 @@
                 <img src="{% static 'img/eco/GOTS_logo1_grey.png' %}" alt="">
                 <img src="{% static 'img/eco/OE_100_logo1_grey.png' %}" alt="">
                 <img src="{% static 'img/eco/OE_blended_logo1_grey.png' %}" alt="">
-                <img class="sus" src="{% static 'img/eco/Sustinable_grey.png' %}" alt="">
+<!--                <img src="{% static 'img/Sustinable_grey.png' %}" alt="" width="10%" height="10%">-->
+				
+				<img class="sus" src="{% static 'img/Sustinable_grey_sq.png' %}" alt="">
+					
+				
+				
+				
+<!--				<img class="sus" src="{% static 'img/eco/Sustinable_grey.png' %}" alt="">-->
                 <img src="{% static 'img/eco/Okeo_tex_100_logo2_grey.png' %}" alt="">
             </div>
         </div>
@@ -65,7 +148,7 @@
                         <div>T-shirts / Shirts / Tops: 300</div>
                         <div>Womenswear: 50</div>
                     </div>
-                    <button class="dialog-submit">Contact</button>
+                    <button class="dialog-submit" ><a style="color:white;" href="/contact"> Contact</a></button>
                 </div>
             </div>
             <div class="main">
@@ -162,4 +245,6 @@
             <div class="data">14:00</div>
         </div>
     </div>
+
+
 {% endblock %}

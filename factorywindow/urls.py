@@ -29,5 +29,6 @@ urlpatterns = [
 
 	url(r'^home/', home_views.index),
 	url(r'^factory/story/', factory.story),
+	url(r'^contact/', factory.request_form),
 	url(r'^results/', include("factory.urls")),
 ]

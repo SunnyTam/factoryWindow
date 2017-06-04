@@ -252,7 +252,10 @@
 	
 	$( "#contactForm" ).submit(function( event ) {
 		$('#myModal').modal('hide');
+		
   event.preventDefault();
+		
+		window.location.href = "/factory/story";
 		
 });
 	
