@@ -1,0 +1,318 @@
+{% load static %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter Heart Button Animation</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+	$(document).ready(function()
+	{
+    
+	$('body').on("click",'.heart',function()
+    {
+    	
+    	var A=$(this).attr("id");
+    	var B=A.split("like");
+        var messageID=B[1];
+        var C=parseInt($("#likeCount"+messageID).html());
+    	$(this).css("background-position","")
+        var D=$(this).attr("rel");
+       
+        if(D === 'like') 
+        {      
+        $("#likeCount"+messageID).html(C+1);
+        $(this).addClass("heartAnimation").attr("rel","unlike");
+        
+        }
+        else
+        {
+        $("#likeCount"+messageID).html(C-1);
+        $(this).removeClass("heartAnimation").attr("rel","like");
+        $(this).css("background-position","left");
+        }
+
+
+    });
+
+
+	});
+	</script>
+	
+	<style>
+		
+		.im-centered{margin: auto; 
+		text-align:center; 
+		}
+	
+		body{color: #333333}
+    #container{
+    	margin:0 auto;
+    	width: 900px;
+    	font-family: arial;
+    }
+    .heart {
+	    background: url( "{% static 'img/web_heart_animation.png' %}" );
+	    background-position: left;
+	    background-repeat: no-repeat;
+	    height: 50px;
+	    width: 50px;
+	    cursor: pointer;
+	    position: absolute;
+	    left:-14px;
+        background-size:2900%
+    }
+    .heart:hover, .heart:focus{
+    background-position: right;
+	}
+
+    @-webkit-keyframes heartBlast {
+    0% {
+	    background-position: left;
+	}
+	100% {
+	    background-position: right;
+	}
+	}
+
+	@keyframes heartBlast {
+	    0% {
+	    background-position: left;
+	}
+	100% {
+	    background-position: right;
+	}
+	}
+
+	.heartAnimation {
+    display: inline-block;
+    -webkit-animation-name: heartBlast;
+    animation-name: heartBlast;
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: steps(28);
+    animation-timing-function: steps(28);
+    background-position: right;
+    }
+    .feed p{font-family: 'Georgia', Times, Times New Roman, serif; font-size: 25px}
+    .feed{clear: both; position: relative;}
+    a{color: #7ac9ed}
+    p{margin: 0px; padding: 0px}
+    .likeCount{font-family: 'Georgia', Times, Times New Roman, serif; margin-top: 13px;margin-left: 28px;font-size: 16px;color: #999999}
+    
+		.shift_left{
+			
+			top: -50px;
+			position: relative;
+		}
+		
+		.box {
+  transition: box-shadow .3s;
+}
+.box:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+		
+		
+		
+		
+		
+		
+	</style>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+
+	<div class="im-centered" >
+
+		<h4 style="display:inline;">Wool<i class="material-icons">keyboard_arrow_down</i></h4>
+		<h4 style="display:inline;">Coats<i class="material-icons">keyboard_arrow_down</i></h4>
+		<h4 style="display:inline;">China(18)<i class="material-icons">keyboard_arrow_down</i></h4>
+	
+			
+		</div>
+		
+
+                
+</div>
+		
+	<br>
+	
+	
+	
+		
+	
+	
+<div class="row">
+	
+	<div class="col-sm-2"></div>
+
+	<div class="col-sm-4">
+		
+		<div class="card box" >
+			
+			<a href="#"><img class="card-img-top" src="{% static 'img/1.jpg' %}" alt="Card image cap" width="100%" ></a>
+			
+			<div class="card-block">
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<p>Dong guan</p>
+						<h4 class="card-title">Wool Factory</h4>
+					</div>
+				
+					<div class="col-sm-1">
+						<div class="feed shift_left" id="feed1">
+							<p style="visibility: hidden;">arst</p>
+							<div class="heart " id="like1" rel="like"></div> <div class="likeCount" id="likeCount1">15</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-sm-4">
+		<div class="card box" >
+			<img class="card-img-top" src="{% static 'img/2.jpg' %}" width="100%" alt="Card image cap">
+			<div class="card-block">
+				
+				<div class="row">
+					<div class="col-sm-7">
+						<p>Guangzhou</p>
+						<h4 class="card-title">The Knit Factory</h4>
+					</div>
+				
+					<div class="col-sm-1">
+						<div class="feed shift_left" id="feed1">
+							<p style="visibility: hidden;">arst</p>
+							<div class="heart " id="like2" rel="like"></div> <div class="likeCount" id="likeCount2">7</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+	
+	
+<div class="row">
+	
+	<div class="col-sm-2"></div>
+
+	<div class="col-sm-4">
+		
+		<div class="card box" >
+			
+			<a href="#"><img class="card-img-top" src="{% static 'img/3.jpg' %}" alt="Card image cap" width="100%" ></a>
+			
+			<div class="card-block">
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<p>Dong guan</p>
+						<h4 class="card-title">Wool Masters</h4>
+					</div>
+				
+					<div class="col-sm-1">
+						<div class="feed shift_left" id="feed1">
+							<p style="visibility: hidden;">arst</p>
+							<div class="heart " id="like3" rel="like"></div> <div class="likeCount" id="likeCount3">3</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-sm-4">
+		<div class="card box" >
+			<img class="card-img-top" src="{% static 'img/4.jpg' %}" width="100%" alt="Card image cap">
+			<div class="card-block">
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<p>Tianjin</p>
+						<h4 class="card-title">Luxury &#38; Wool</h4>
+					</div>
+				
+					<div class="col-sm-1">
+						<div class="feed shift_left" id="feed1">
+							<p style="visibility: hidden;">arst</p>
+							<div class="heart " id="like4" rel="like"></div> <div class="likeCount" id="likeCount4">9</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+	
+<div class="row">
+	
+	<div class="col-sm-2"></div>
+
+	<div class="col-sm-4">
+		
+		<div class="card box" >
+			
+			<a href="#"><img class="card-img-top" src="{% static 'img/5.jpg' %}" alt="Card image cap" width="100%" ></a>
+			
+			<div class="card-block">
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<p>Beijing</p>
+						<h4 class="card-title">Studio 105</h4>
+					</div>
+				
+					<div class="col-sm-1">
+						<div class="feed shift_left" id="feed1">
+							<p style="visibility: hidden;">arst</p>
+							<div class="heart " id="like5" rel="like"></div> <div class="likeCount" id="likeCount5">10</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-sm-4">
+		<div class="card box" >
+			<img class="card-img-top" src="{% static 'img/6.jpg' %}" width="100%" alt="Card image cap">
+			<div class="card-block">
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<p>Dongguan</p>
+						<h4 class="card-title">Woolcci</h4>
+					</div>
+				
+					<div class="col-sm-1">
+						<div class="feed shift_left" id="feed1">
+							<p style="visibility: hidden;">arst</p>
+							<div class="heart " id="like6" rel="like"></div> <div class="likeCount" id="likeCount6">9</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+
+
+</div>
+</body>
+</html>

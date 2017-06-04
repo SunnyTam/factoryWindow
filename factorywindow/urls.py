@@ -27,5 +27,5 @@ urlpatterns = [
 #	url( r'^', include("factory.urls")),
 
 	url(r'^home/', home_views.index),
-
+	url(r'^results/', include("factory.urls")),
 ]
