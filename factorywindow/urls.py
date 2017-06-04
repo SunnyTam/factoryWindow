@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 	url(r'^login/$', auth_views.login, {'template_name': 'login.html', 'redirect_authenticated_user': True, }, name='login'),
 	url(r'^register/', include("users.urls")),
+	url( r'^', include("factory.urls")),
 ]

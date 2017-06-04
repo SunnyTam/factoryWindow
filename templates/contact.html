@@ -1,0 +1,266 @@
+{% load static %}
+{% load staticfiles %}
+
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{% include "bootstrap.html" %}
+	
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static 'css/reset.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/bootstrap-tagsinput.css' %}"/>
+	
+  	
+	<title>Contact Form | CodyHouse</title>
+	
+	<style>
+		
+		.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+	
+		/* layout.css Style */
+.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+}
+		
+		.mini-text{
+			font-size: 0.2em;
+		}
+		
+		.bootstrap-tagsinput {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    display: block;
+    padding: 4px 6px;
+    color: #555;
+    vertical-align: middle;
+    border-radius: 4px;
+    max-width: 100%;
+    line-height: 22px;
+    cursor: text;
+}
+.bootstrap-tagsinput input {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0 6px;
+    margin: 0;
+    width: auto;
+    max-width: inherit;
+}
+	</style>
+</head>
+<body>
+	
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      
+		<form class="cd-form floating-labels" id="contactForm" > {% csrf_token %}
+		<fieldset>
+			<legend>Design</legend>
+
+<!--
+			<div class="error-message">
+				<p>Please enter a valid email address</p>
+			</div>
+-->
+
+			<div class="icon">
+				<label class="cd-label" for="cd-name">Item</label>
+				<input class="user" type="text" name="cd-name" id="cd-name" placeholder="E.g. T-shirt/blouse/dress/skirt/trousers">
+		    </div> 
+			
+			<div>
+				<h4>For</h4>
+
+				<ul class="cd-form-list">
+					<li>
+						<input type="checkbox" id="cd-checkbox-1">
+						<label for="cd-checkbox-1">Men</label>
+					</li>
+
+					<li>
+						<input type="checkbox" id="cd-checkbox-2">
+						<label for="cd-checkbox-2">Women</label>
+					</li>
+
+					<li>
+						<input type="checkbox" id="cd-checkbox-3">
+						<label for="cd-checkbox-3">Kids</label>
+					</li>
+				</ul>
+			</div>
+
+		    <div class="icon">
+
+				<h4>Pattern Spec or Tech Pack</h4>
+				
+				<div class="upload-drop-zone" id="drop-zone">
+				Just drag and drop files here or ...
+
+				<!--			  <button  class="btn btn-sm btn-primary" id="uploadButton">Upload files</button>-->
+				<label class="btn btn-default btn-file">
+				Browse <input type="file" style="display: none;">
+				</label>
+				</div>
+		    </div> 
+
+		    <div class="icon">
+		    	<label class="cd-label" for="cd-email">Fabric</label>
+				<input class="email" type="email" name="cd-email" id="cd-email" placeholder="E.g. Light cotton, Merino wool...">
+		    </div>
+			
+			
+
+			
+			<div >
+		    	<label class="cd-label" for="cd-email">Matrials</label>
+<!--				<input class="email" type="email" name="cd-email" id="cd-email" placeholder="E.g. Light cotton, Merino wool...">-->
+				
+				<input type="text" value="" data-role="tagsinput" id="tags" class="form-control" >
+				
+<!--
+				<div class="chip"> Threads <img src="{% static 'img/add18.svg' %}" > </div>
+				<div class="chip"> Buttons <img src="{% static 'img/add18.svg' %}" > </div>
+				<div class="chip"> Zips <img src="{% static 'img/add18.svg' %}" > </div>
+-->
+		    </div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Samples &#38; Ordering</legend>
+
+			<div>
+				<div class="row">
+					<div class="col-sm-6">
+						<h4>Color</h4>
+						<input type="text" name="cd-name" id="cd-name">
+					</div>
+					
+					<div class="col-sm-6">
+						<h4>Size</h4>
+						<input type="text" name="cd-name" id="cd-name">
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-6">
+					<h4>No. of samples</h4>
+					<input type="text" name="cd-name" id="cd-name">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-4">
+					<h4>Quantity</h4>
+					<h5 class="mini-text">How many will you order in the future</h5>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" name="cd-name" id="cd-name">
+					
+				</div>
+				<div class="col-sm-4">
+					<small class="mini-text">(minimum order 100)</small>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-4">
+					<h4>Timeframe</h4>
+					<h6 class="mini-text">For production and delivery</h6>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" name="cd-name" id="cd-name">
+				</div>
+				<div class="col-sm-4">
+					<select>
+						<option value="volvo">Days</option>
+						<option value="volvo">Weeks</option>
+						<option value="saab">Months</option>
+					</select>
+				</div>
+			</div>
+
+			<div>
+		      	<input type="submit" value="Send Message" form="contactForm">
+		    </div>
+		</fieldset>
+	</form>
+		
+    </div>
+
+  </div>
+</div>
+	
+
+
+
+	
+	
+	
+<script src="{% static 'js/main.js' %}"></script> 
+	<script src="{% static 'js/bootstrap-tagsinput.js' %}"></script> 
+
+
+	
+	<script>$('#myModal').modal('show');</script>
+	
+<!--	<script src="https://rawgit.com/twitter/typeahead.js/master/dist/bloodhound.min.js"></script>-->
+<script>
+
+	
+	$( "#contactForm" ).submit(function( event ) {
+		$('#myModal').modal('hide');
+  event.preventDefault();
+		
+});
+	
+</script>
+	
+
+
+	
+	
+</body>
+</html>
