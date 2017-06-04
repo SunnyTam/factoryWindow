@@ -1,0 +1,236 @@
+.menubar-hidden-padding {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+}
+
+.hr {
+    width: 274px;
+}
+
+.cover img {
+    width: 100%;
+    min-height: 300px;
+}
+
+.story > .topic {
+    line-height: initial;
+    max-width: 700px;
+    margin: 34px auto 30px;
+}
+
+.story > .topic > .item {
+    padding: 15px 0;
+}
+
+.story > .topic > .title {
+    font-size: 14px;
+    color: #4a494a;
+}
+
+.story > .topic > .main-title {
+    font-size: 48px;
+    font-family: 'Lora', serif;
+    letter-spacing: 0.8px;
+}
+
+.story > .topic > .desc {
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    color: #9b9a9b;
+}
+
+.content {
+    max-width: 944px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.content .contact {
+    position: relative;
+    min-width: 242px;
+    width: 242px;
+    margin-right: 40px;
+}
+
+.content .contact .dialog {
+    width: 242px;
+    position: absolute;
+    min-height: 600px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 50px;
+    padding: 0 32px;
+}
+
+.content .contact .dialog .title {
+    font-family: Raleway;
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    color: #4a4a4a;
+    padding: 12px 0;
+}
+
+.content .contact .dialog .content {
+    display: block;
+    font-family: Raleway;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    color: #4a4a4a;
+}
+
+.content .contact .dialog .content div {
+    margin: 10px 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.content .contact .dialog .circle {
+    transform: translate(62px, -50%) scale(2);
+    height: 50px;
+    width: 50px;
+    max-width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    border: solid 1px #969696;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+.content .contact .dialog.fixed {
+    top: 80px;
+    position: fixed !important;
+}
+
+.dialog-submit {
+    width: 150px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #f37a88;
+    color: white;
+    text-align: center;
+    border: 0px;
+    margin: 10px 16px;
+}
+
+.content > .main {
+    max-width: 662px;
+}
+
+.content > .main .title {
+    font-family: Lora;
+    font-size: 28px;
+    color: #4a494a;
+}
+
+.content > .main .content {
+    font-family: Raleway;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    color: #4a494a;
+}
+
+.content > .main .item {
+    padding: 30px 0;
+}
+
+.cust-slick-dots {
+    height: 10px;
+}
+
+.cust-slick-dots li button:before {
+    font-size: 14px !important;
+}
+
+.slick-item {
+    width: 100%;
+    height: auto;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black !important;
+}
+
+.slick-prev {
+    left: 10px !important;
+    z-index: 1 !important;
+}
+
+.slick-next {
+    right: 10px !important;
+    z-index: 1 !important;
+}
+
+.content .contact {
+    width: 100%;
+}
+
+.contact > .icon {
+
+    display: inline-block;
+}
+
+.contact > .icon img {
+    height: 119px;
+    width: 119px;
+    border-radius: 50%;
+}
+
+.contact > .content {
+    display: inline-block;
+    max-width: 490px;
+    margin-left: 30px;
+}
+
+.contact > .content > .title {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.contact > .content > div {
+    margin: 12px 0;
+}
+
+.map {
+    width: 100%;
+}
+
+.map .content {
+    background-color: #f5f5f5;
+    display: block;
+    width: 100%;
+    margin: 0 0;
+    max-width: 100%;
+    padding: 20px 700px;
+}
+
+.map .title {
+    font-family: Raleway;
+    font-size: 12px;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+.map .data {
+    font-family: Roboto;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    color: #4a4a4a;
+}
+
+.eco img {
+    height: 109px;
+}
+
+.eco img.sus {
+    height: 30px;
+}
