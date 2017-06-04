@@ -126,8 +126,27 @@
 	</style>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+	
+	<link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/menubar.css' %}"/>
+	
 </head>
 <body>
+	
+	
+	<div class="menubar-wrapper">
+    <img src="{% static 'img/icon.svg' %}" class="icon" alt="Icon">
+    <div>
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <div class="item">Home</div>
+        <div class="item">Sustainability</div>
+        <div class="item">About</div>
+        <div class="border-item">Login</div>
+    </div>
+</div>
+	
+	<div style="height: 80px;"></div>
+	
 
 	<div class="im-centered" >
 
@@ -218,7 +237,7 @@
 				
 				<div class="row">
 					<div class="col-sm-6">
-						<p>Dong guan</p>
+						<p>Chongqing</p>
 						<h4 class="card-title">Wool Masters</h4>
 					</div>
 				
@@ -314,5 +333,17 @@
 
 
 </div>
+
+<div class="im-centered" >
+
+		<font size="5">1&nbsp;</font>
+	<font size="5">2&nbsp;</font>
+	<font size="5">3&nbsp;<i class="material-icons">keyboard_arrow_right</i></font>
+		
+	
+			
+		</div>
+
+<br>
 </body>
 </html>
