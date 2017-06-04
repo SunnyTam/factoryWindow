@@ -134,6 +134,11 @@
     font-size: 20px;
 }
 
+.landing .desc  {
+    z-index: 2;
+    position:relative;
+}
+
 .landing .desc .title {
     margin: 0 21px;
 }
@@ -199,6 +204,7 @@
     height: 120%;
     padding: 150px 400px;
     top: -80px;
+    z-index: 1;
 }
 
 .overlay .focus {
