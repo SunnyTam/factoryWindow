@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import raven
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -123,6 +124,10 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = '/'
 
-if os.getenv('DATABASE_URL') is not None:
-    import dj_database_url
-    DATABASES['default'] = dj_database_url.config()
+
+RAVEN_CONFIG = {
+    'dsn': os.environ.get("SENTRY_DSN"),
+    # If you are using git, you can also automatically configure the
+    # release based on the git info.
+    'release': raven.fetch_git_sha(os.path.dirname(os.pardir)),
+}
