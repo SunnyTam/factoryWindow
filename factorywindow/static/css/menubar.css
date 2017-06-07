@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 
-.menubar-wrapper > .icon {
+.menubar-wrapper > a {
     /*border: solid 1px #969696;*/
     /*background: #d7d7d7;*/
     display: inline-block;
@@ -22,11 +22,19 @@
 
 }
 
+.menubar-wrapper > a > img {
+    height: 100%;
+}
+
 .menubar-wrapper  .item {
     display: inline-block;
     vertical-align: middle;
     /*align-self: flex-end;*/
     margin: 0 20px 0 20px;
+    color: #4a494a;
+}
+
+.menubar-wrapper .item a {
     color: #4a494a;
 }
 
