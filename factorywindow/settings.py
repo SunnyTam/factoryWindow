@@ -133,5 +133,5 @@ RAVEN_CONFIG = {
 }
 
 ALLOWED_HOSTS = [
-    'factorywindow.herokuapp.com'
+    os.environ.get("ALLOWED_HOST")
 ]
